@@ -1,71 +1,30 @@
+/* global custom css set-up */
+
 @import url(reset.css);
+@import url(global.css);
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-  -webkit-tap-highlight-color: transparent !important;
-}
+/* NOTE : 프린트 최적화 설정 및 */
+@media print {
+  /* 전체 페이지를 A4 크기에 맞춤 */
+  body {
+    width: 210mm; /* A4 너비 */
+    height: 297mm; /* A4 높이 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
 
-html,
-body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -o-text-size-adjust: 100%;
-  line-height: 1.5;
-  font-style: normal;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, system-ui,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
-  font-size: 14px;
-  color: #000;
-  background-color: #fff;
-  max-width: 210mm;
-  margin: 0 auto;
-  position: relative;
-}
+  /* 헤더, 푸터, 네비게이션 등 불필요한 요소 완전삭제 클래스 */
+  .no-print {
+    display: none !important;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-family: "Pretendard Variable", "Pretendard", Roboto, -apple-system,
-    BlinkMacSystemFont, system-ui, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
+  /* 페이지 브레이크 설정 (각 섹션이 잘리지 않도록) */
+  .page-break {
+    page-break-before: always; /* 특정 섹션 전에 강제 페이지 나눔 */
+  }
 
-a,
-button {
-  /* color: rgba(255, 255, 255, 0.50); */
-  text-decoration: none;
-  transition: all 0.215s;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
+  /* TODO 기본 불필요한 웹 스타일링 제거 ? */
+  /* * {
+    background: none !important;
+    box-shadow: none !important;
+  } */
 }

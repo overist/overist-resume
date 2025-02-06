@@ -13,7 +13,7 @@ import { globalTheme } from "./styles/globalTheme"
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-      <Box maxWidth="210mm" margin="auto" padding={4}>
+      <Box maxWidth="100%" margin="auto" p={4}>
         <Resume />
       </Box>
     </ThemeProvider>
