@@ -1,15 +1,15 @@
-import React from "react"
-import { Box, Typography, Card, CardContent, Link } from "@mui/material"
-import { PROJECTS } from "../../payload"
+import React from 'react'
+import { Box, Typography, Card, CardContent, Link } from '@mui/material'
+import { PROJECTS } from '../../payload'
 
 const Projects: React.FC = () => {
   return (
     <Box>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         Projects
       </Typography>
       {PROJECTS.map((project, index) => (
-        <Card key={index} sx={{ mb: 2 }}>
+        <Card key={index} sx={{ mb: 2, ml: 2 }}>
           <CardContent>
             <Typography variant="h6">{project.name}</Typography>
             <Typography variant="body2" color="text.secondary" paragraph>

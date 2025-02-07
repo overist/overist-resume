@@ -1,23 +1,23 @@
-import React from "react"
-import Resume from "./components/Resume"
+import React from 'react'
+import Resume from './components/Resume'
 
-import "@fontsource/roboto/300.css"
-import "@fontsource/roboto/400.css"
-import "@fontsource/roboto/500.css"
-import "@fontsource/roboto/700.css"
-import "./styles/index.css"
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import './styles/index.css'
 
-import { Box, ThemeProvider } from "@mui/material"
-import { globalTheme } from "./styles/globalTheme"
+import { Box, ThemeProvider } from '@mui/material'
+import { globalTheme } from './styles/globalTheme'
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-      <Box maxWidth="100%" margin="auto" p={4}>
+      <Box maxWidth="1080px" margin="auto" p={4}>
         <Resume />
       </Box>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

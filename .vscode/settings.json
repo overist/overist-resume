@@ -1,0 +1,16 @@
+{
+  "workbench.colorTheme": "Monokai",
+  "files.eol": "\n",
+  // enable globally (here: format on save)
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "**/yarn.lock": true,
+    "**/.gitignore": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.tabSize": 2
+}

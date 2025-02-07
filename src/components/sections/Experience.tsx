@@ -1,34 +1,73 @@
-import React from "react"
-import { Box, Typography, List, ListItem, ListItemText } from "@mui/material"
-import { EXPERIENCE } from "../../payload"
+import React from 'react'
+import { Box, Typography, Paper, Chip } from '@mui/material'
+import { EXPERIENCE } from '../../payload'
 
 const Experience: React.FC = () => {
+  const CustomChip: React.FC<{ label: string }> = ({ label }) => (
+    <div
+      style={{
+        padding: '0.25rem 0.5rem',
+        // border: '1px solid #000',
+        // fontWeight: 900,
+        fontSize: '0.8rem',
+        backgroundColor: '#e9ecef'
+      }}
+    >
+      {`${label}`}
+    </div>
+  )
+
   return (
     <Box>
-      <Typography variant="h5" gutterBottom>
-        Experience
+      <Typography variant="h4" gutterBottom>
+        Work Experience
       </Typography>
-      <List>
-        {EXPERIENCE.map((exp, index) => (
-          <ListItem key={index} alignItems="flex-start">
-            <ListItemText
-              primary={exp.company}
-              secondary={
-                <>
-                  <Typography
-                    component="span"
-                    variant="body2"
-                    color="text.primary"
-                  >
-                    {exp.role}
-                  </Typography>
-                  {` — ${exp.period}`}
-                </>
-              }
-            />
-          </ListItem>
-        ))}
-      </List>
+      {EXPERIENCE.map((exp, index) => (
+        <Box
+          sx={{
+            border: '1px solid #dee2e6'
+          }}
+          key={index}
+          ml={2}
+          py={2}
+          px={2}
+          my={2}
+        >
+          <Typography variant="h5">{`${exp.company}`}</Typography>
+          <Typography
+            variant="h6"
+            gutterBottom
+            sx={{
+              fontWeight: 400,
+              color: 'secondary.main'
+            }}
+          >
+            {`${exp.role} | ${exp.period}`}
+          </Typography>
+
+          <Box ml={2}>
+            {exp.content.map((content, index) => (
+              <Typography variant="body1" key={index} width={'fit-content'}>
+                • {content}
+              </Typography>
+            ))}
+          </Box>
+
+          <Box mt={1}>
+            <Typography variant="h6" gutterBottom>
+              Skills
+            </Typography>
+            <Box display={'flex'} gap={1}>
+              {exp.skill.map((skill, index) => (
+                <CustomChip label={skill} />
+                // <Box key={index} display={'inline-block'} mr={0.5}>
+                //   {skill}
+                // </Box>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+      ))}
     </Box>
   )
 }

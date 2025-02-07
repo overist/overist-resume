@@ -3,13 +3,13 @@ import { createTheme } from '@mui/material'
 export const globalTheme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2' // 기본 색상
+      main: '#4c6ef5' // 기본 색상
     },
     secondary: {
-      main: '#dc004e' // 보조 색상
+      main: '#868e96' // 보조 색상
     },
     background: {
-      default: '#f5f5f5' // 배경색
+      default: '#edf2ff' // 배경색
     }
   },
   typography: {
@@ -20,33 +20,33 @@ export const globalTheme = createTheme({
     },
     h1: {
       fontSize: '3rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     h2: {
       fontSize: '2.5rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     h3: {
       fontSize: '2rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     h4: {
       fontSize: '1.5rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     h5: {
       fontSize: '1.25rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     h6: {
       fontSize: '1rem',
-      fontWeight: 500,
-      lineHeight: 1.2
+      fontWeight: 700,
+      lineHeight: 1.65
     },
     body1: {
       fontSize: '1rem',
@@ -56,7 +56,8 @@ export const globalTheme = createTheme({
     body2: {
       fontSize: '0.875rem',
       fontWeight: 400,
-      lineHeight: 1.5
+      lineHeight: 1.5,
+      display: 'inline-block'
     },
     subtitle1: {
       fontSize: '1rem',
@@ -70,6 +71,14 @@ export const globalTheme = createTheme({
     }
   },
   components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: 'none',
+          color: '#4c6ef5'
+        }
+      }
+    },
     MuiChip: {
       styleOverrides: {
         root: {

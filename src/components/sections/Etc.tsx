@@ -1,11 +1,11 @@
-import React from "react"
-import { Box, Typography, List, ListItem, ListItemText } from "@mui/material"
-import { ETC } from "../../payload"
+import React from 'react'
+import { Box, Typography, List, ListItem, ListItemText } from '@mui/material'
+import { ETC } from '../../payload'
 
 const Etc: React.FC = () => {
   return (
     <Box>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         Additional Information
       </Typography>
       {Object.entries(ETC).map(([category, items]) => (
