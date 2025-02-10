@@ -9,12 +9,14 @@ import './styles/index.css'
 
 import { Box, ThemeProvider } from '@mui/material'
 import { globalTheme } from './styles/globalTheme'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-      <Box maxWidth="1080px" margin="auto" p={4}>
+      <Box maxWidth="1080px" margin="auto" px={4} pt={4}>
         <Resume />
+        <Footer />
       </Box>
     </ThemeProvider>
   )

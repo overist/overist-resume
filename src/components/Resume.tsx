@@ -6,13 +6,18 @@ import Experience from './sections/Experience'
 import Projects from './sections/Projects'
 import Etc from './sections/Etc'
 
-const Resume: React.FC = () => {
-  const CustomHr = () => (
-    <Box
-      sx={{ width: '100%', ml: 2, my: 2, borderBottom: '1px solid #dee2e6' }}
-    />
-  )
+export const CustomHr = ({ inner = false }) => (
+  <Box
+    sx={{
+      width: '100%',
+      ml: inner ? 0 : 2,
+      my: 2,
+      borderBottom: '1px solid #dee2e6'
+    }}
+  />
+)
 
+const Resume: React.FC = () => {
   return (
     <Box>
       <Grid container spacing={2}>

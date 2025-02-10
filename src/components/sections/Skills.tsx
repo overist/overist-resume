@@ -34,13 +34,19 @@ const Skills: React.FC = () => {
       {Object.entries(SKILLS).map(([category, skills]) => (
         <Box key={category} mb={1} ml={2}>
           <Typography variant="h6">{category}</Typography>
-          <Grid container spacing={1}>
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 1,
+              flexWrap: 'wrap'
+            }}
+          >
             {skills.map((skill, index) => (
-              <Grid item key={index}>
+              <Box key={index}>
                 <CustomChip name={skill.name} level={skill.level} />
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Box>
       ))}
     </Box>

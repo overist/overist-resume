@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
         >
           <Typography variant="h5">{`${exp.company}`}</Typography>
           <Typography
-            variant="h6"
+            variant="body2"
             gutterBottom
             sx={{
               fontWeight: 400,
