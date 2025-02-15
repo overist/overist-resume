@@ -52,7 +52,15 @@ const Projects: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Typography variant="body1" width={'fit-content'}>
+                    <Typography
+                      variant="body1"
+                      width={'fit-content'}
+                      sx={{
+                        textDecoration: link.deprecated
+                          ? 'line-through'
+                          : 'unset'
+                      }}
+                    >
                       {link.title}
                     </Typography>
                   </Link>

@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { deprecatedPropType } from '@mui/material'
 
 export const INTRODUCE = {
   name: '최원준(overist)',
@@ -80,7 +81,8 @@ export const SKILLS = {
   Etc: [
     { name: 'Git', level: 'Advanced' },
     { name: 'Linux', level: 'Advanced' },
-    { name: 'Security', level: 'Advanced' },
+    { name: 'Docker', level: 'Intermediate' },
+    { name: 'Security', level: 'Intermediate' },
     { name: 'TypeScript', level: 'Intermediate' },
     { name: 'Notion', level: 'Intermediate' },
     { name: 'Jira', level: 'Intermediate' }
@@ -90,26 +92,25 @@ export const SKILLS = {
 export const EXPERIENCE = [
   {
     company: '(주)슈퍼핸드',
-    role: 'BE Lead Developer',
+    role: '웹 풀스택, 인프라 리드',
     period: '2024-05 ~ 재직 중',
     content: [
       '프로모션으로 급증한 DAU 4000명에 대응하는 AWS 인스턴스 수평확장 및 로드밸런서 구축',
-      '지속적인 플랫폼 확장으로 인해 모놀리식 아키텍처 => MSA 아키텍처 전환',
+      '지속적인 플랫폼 확장으로 인해 모놀리식 아키텍처를 MSA 아키텍처로 전환',
       '인프라 스케일 아웃으로 인한 통합로깅시스템(Cloudwatch) 구축',
       '게임서버 플레이간 각종 지표 산출을 위한 로그 데이터(400만 건) 쿼리 튜닝',
-      '4개 플랫폼간 통합인증서버 구축, 이메일기반 인증 => 소셜인증 증설',
+      '4개 플랫폼간 통합인증서버 구축, 이메일기반 인증에서 소셜인증 증설',
       'Jenkins를 통한 CI/CD 파이프라인 및 블루/그린 배포 인프라 구축',
-      '인프라단 보안 유지보수 및 모니터링 (Turnstile, Throttler, WAF)',
-      '시스템 해킹시도(보안사고x) 공격자 행위분석 및 침해사고 대응',
+      '침해사고대응, 인프라단 보안 유지보수(Turnstile, Throttler, WAF)',
       '2~3주 주기 배포 스프린트간의 모바일앱 BE git flow 설계',
-      '8개 서비스 인프라 관리(AWS, SSL, ACL, CDN, DNS, nginx)',
+      '8개 서비스 네트워크 인프라 관리(AWS, SSL, ACL, CDN, DNS, nginx)',
       'Innopay, Utransfer 연계 환전(출금) 인증프로세스 및 전산 시스템 개발',
       'Innopay, Paypal 연계 결제 전산 시스템 개발',
       'Cloudflare 연계 모바일/웹캠 라이브 스트리밍 송출 서비스 개발',
       '게임 아이템 마켓 플레이스(폐쇄몰) BE, FE 개발',
       '3개 플랫폼간 통합 관리자페이지(Next.js) 개발',
       'AES256, RSA를 활용한 게임 점수 무결성 처리 및 개인정보 암/복호화 처리',
-      '사내 각종 유틸서버 구축 (서버 배포/장애 알림봇, 헬스체커, 로그수집, VPN, 백업)',
+      '사내 각종 유틸 구축 (서버 배포/장애 알림봇, 헬스체커, 로그수집, VPN, 백업)',
       '제로트러스트 보안을 위한 ENV 분리 및 인증/업데이트/관리 서버 구축'
     ],
     skill: [
@@ -127,7 +128,7 @@ export const EXPERIENCE = [
   },
   {
     company: '(주)타이탄네트웍스',
-    role: 'Web Full Stack Developer',
+    role: '웹 풀스택',
     period: '2023-01 ~ 2024-04',
     content: [
       'Nest.js 기반의 웹앱, 배치 설계/개발',
@@ -152,15 +153,15 @@ export const EXPERIENCE = [
   },
   {
     company: '개인 프리랜서',
-    role: 'Web Full Stack Developer',
+    role: '웹 풀스택',
     period: '2022-03 ~ 2022-12',
     content: ['웹애플리케이션 개발 외주활동으로 수익 창출'],
     skill: ['PHP', 'CodeIgniter', 'WordPress', 'Windows IIS']
   },
   {
     company: '스타트업 R&D',
-    role: 'Co-Founder',
-    period: '2020-09 ~ 2022-03',
+    role: '코파운더',
+    period: '2020-08 ~ 2022-03',
     content: [
       '사업계획서 작성, 초기창업패키지 지원사업 참여',
       '웹애플리케이션 개발 외주활동으로 운영비 창출',
@@ -174,7 +175,7 @@ export const EXPERIENCE = [
 export const PROJECTS = [
   {
     title: '모바일 앱 외부송출 라이브 스트리밍 서비스 개발',
-    info: '(주)슈퍼핸드 | 2024-12 ~ 2025-01',
+    info: '(주)슈퍼핸드 | 2024-12 ~ 2025-02',
     summary:
       'OBS Studio 등 외부 송출 프로그램에 연결하여 방송할 수 있는 라이브 스트리밍 서비스를 개발하였습니다.',
     links: [
@@ -188,7 +189,7 @@ export const PROJECTS = [
       }
     ],
     contents: [
-      '1:N 스트리밍 방송을 위한 Cloudflare Live Stream 연계',
+      '1:N 스트리밍 방송을 위한 Cloudflare Stream Live 연계',
       '현금성 재화 후원 기능 개발'
     ]
   },
@@ -222,7 +223,7 @@ export const PROJECTS = [
       'Server to Server 통신 프로세스 설계',
       '인증 정책 설계 및 협의',
       'Google/Apple 소셜로그인 기능 추가, 기존 계정(E-mail) 연동 기능 추가',
-      '모놀리틱 아키텍처 => MSA 아키텍처 전환',
+      '모놀리틱 아키텍처를 MSA 아키텍처로 전환',
       'AWS Loadbalancer, nginx 라우팅 룰을 활용한 API Gateway 및 라우팅 인프라 구축'
     ]
   },
@@ -236,10 +237,14 @@ export const PROJECTS = [
       {
         title: 'N/A',
         link: ''
+      },
+      {
+        title: '포트폴리오:인프라',
+        link: 'https://overist.notion.site/METASKY-AWS-Infra-Structure-Security-198c57c43eef808d96d7d88f50b1d67b?pvs=4'
       }
     ],
     contents: [
-      'nginx 가상호스트, AWS ELB를 활용하여 API Gateway 셋업, 블루/그린 배포 셋업',
+      'AWS ELB를 활용하여 API Gateway 셋업, 블루/그린 배포 셋업',
       '배포시 서버 부하 개선 및 작업 효율을 개선하기 위해 Jenkins CI/CD 자동화 배포 파이프라이닝 셋업'
     ]
   },
@@ -253,6 +258,10 @@ export const PROJECTS = [
       {
         title: 'N/A',
         link: ''
+      },
+      {
+        title: '포트폴리오:인프라',
+        link: 'https://overist.notion.site/METASKY-AWS-Infra-Structure-Security-198c57c43eef808d96d7d88f50b1d67b?pvs=4'
       }
     ],
     contents: [
@@ -270,6 +279,10 @@ export const PROJECTS = [
       {
         title: 'N/A',
         link: ''
+      },
+      {
+        title: '포트폴리오:인프라',
+        link: 'https://overist.notion.site/METASKY-AWS-Infra-Structure-Security-198c57c43eef808d96d7d88f50b1d67b?pvs=4'
       }
     ],
     contents: [
@@ -329,13 +342,17 @@ export const PROJECTS = [
 
   {
     title: 'METASKY 웹 결제/환전 홈페이지 개발',
-    info: '(주)슈퍼핸드 | 2024-05 ~ 2024-07',
+    info: '(주)슈퍼핸드 | 2024-05 ~ 2024-12',
     summary:
-      'MEET:CODA 앱 유저가 가입 후 접근할 수 있는 폐쇄몰입니다. 플랫폼 내 재화를 현금/카드로 구매하거나 후원받은 재화를 현금(KRW, USD)으로 출금하는 프로세스를 직접 설계하였고 홈페이지를 개발하였습니다.',
+      'MEET:CODA 앱 유저가 앱을 통해 가입 후 접근할 수 있는 폐쇄몰입니다. 플랫폼 내 재화를 현금/카드로 구매하거나 후원받은 재화를 현금(KRW, USD)으로 출금하는 프로세스를 설계하고 홈페이지를 개발하였습니다.',
     links: [
       {
-        title: 'MEET:CODA 대시보드',
+        title: 'MEET:CODA 대시보드(폐쇄몰)',
         link: 'https://metasky-plus.com/'
+      },
+      {
+        title: '포트폴리오:결제/환전',
+        link: 'https://overist.notion.site/MEET-CODA-Demo-19bc57c43eef80bb9ec1e5b7018d0295?pvs=4'
       }
     ],
     contents: [
@@ -367,15 +384,25 @@ export const PROJECTS = [
   {
     title: 'METASKY 홈페이지 개발',
     info: '(주)타이탄네트웍스 | 2023-08 ~ 2023-08',
-    summary: '가로 스크롤의 인터렉티브한 랜딩 페이지를 개발하였습니다.',
-    links: [{ title: 'N/A', link: '' }],
+    summary: '가로 스크롤의 인터렉티브 랜딩 페이지를 개발하였습니다.',
+    links: [
+      {
+        title: 'METASKY 홈페이지(유지보수 중단)',
+        link: 'https://metaskyworld.net',
+        deprecated: true
+      },
+      {
+        title: '포트폴리오:랜딩페이지',
+        link: 'https://overist.notion.site/198c57c43eef80d2a73ad7f860683b94'
+      }
+    ],
     contents: [
       '시니어 UI/UX 디자이너와 협업하여 랜딩 페이지 개발',
       'React, emotion을 활용한 인터렉티브 웹앱 구현'
     ]
   },
   {
-    title: '스마트스토어 프론트엔드 개발',
+    title: '오픈마켓 프론트엔드 개발',
     info: '(주)타이탄네트웍스 | 2023-07 ~ 2023-09',
     summary: 'Next.js 기반 사용자 페이지 개발',
     links: [{ title: 'N/A', link: '' }],
@@ -391,10 +418,20 @@ export const PROJECTS = [
     info: '(주)타이탄네트웍스 | 2023-04 ~ 2023-08',
     summary:
       '"FTD:For The Dog"의 위치 기반 리워드 보상 앱 Android Native App을 개발하였습니다. 또한 랜딩 페이지를 개발하였습니다.',
-    links: [{ title: 'FTD Homepage', link: 'https://forthedog.life/' }],
+    links: [
+      {
+        title: 'FTD Homepage',
+        link: 'https://forthedog.life/'
+      },
+      {
+        title: 'FTD(AOS)(유지보수 중단)',
+        link: 'https://forthedog.life/',
+        deprecated: true
+      }
+    ],
     contents: [
-      'Hilt ViewModel과 Retrofit2를 활용하여 HTTP 통신 간 세션 유지 코어 개발',
-      'Jetpack Compose를 활용하여 Composable 패턴으로 Android UI 개발',
+      'Hilt ViewModel과 Retrofit2를 활용하여 HTTP 통신 간 세션쿠키 유지 코어(네트워크 인터셉터) 개발',
+      'Jetpack Compose를 활용하여 Composable 패턴으로 Android UI 개발(보조)',
       '일러스트 디자이너와 협업하여 React를 활용한 기업 랜딩페이지 개발',
       'CSS로 구현이 어려운 일러스트 기반 벡터 디자인을 SVG 포팅 전략으로 구현',
       'Lighthouse 및 Cloudflare CDN을 활용한 서버 트래픽 최적화'
@@ -405,13 +442,37 @@ export const PROJECTS = [
     info: '(주)타이탄네트웍스 | 2023-02 ~ 2023-05',
     summary:
       '"Monte Platform"의 웹 지갑을 Next.js 를 활용하여 개발하였습니다. 또한 랜딩 페이지를 기획하고 개발하였습니다.',
-    links: [{ title: 'Monte Platform', link: 'https://monteplatform.org/' }],
+    links: [
+      { title: 'Monte Platform', link: 'https://monteplatform.org/' },
+
+      {
+        title: 'MONDEX(유지보수 중단)',
+        link: 'https://monteplatform.org/swap',
+        deprecated: true
+      }
+    ],
     contents: [
       'Next.js를 활용한 SSR 기반 웹앱 개발',
       '시니어 UI/UX 디자이너와 협업하여 UI 구현',
       'React, recoil을 활용하여 스테이킹, 스왑, 코인지갑 UI 개발',
-      '고객사 암호화폐 백서를 분석하여 From-scratch 단계부터 기획',
+      '고객사 암호화폐 백서를 분석하여 From-scratch 단계부터 랜딩페이지 기획',
       'WordPress 템플릿 및 Elements 플러그인을 활용한 테마 커스터마이징'
+    ]
+  },
+  {
+    title: '동아리 홈페이지 개발',
+    info: 'SecurityFirst(동아리) | 2020-02 ~ 2020-09',
+    summary:
+      '4인 팀을 조직하여 XE기반 동아리 홈페이지를 React, express 기반 웹앱으로 마이그레이션 하였습니다.',
+    links: [
+      {
+        title: 'SecurityFirst(회원제 홈페이지)',
+        link: 'https://securityfirst.co.kr/'
+      }
+    ],
+    contents: [
+      'Figma를 활용하여 디자인',
+      'React, redux-thunk, CSS를 활용하여 홈페이지 FE 개발'
     ]
   }
 ]
@@ -423,12 +484,13 @@ export const ETC = {
   },
   Externals: [
     {
-      title: '빅딜아이오 공동 창업',
+      title: '빅딜아이오(코인 커뮤니티) 공동 창업',
       date: '2021-02 ~ 2022-03',
-      content: '서비스 기획, 커뮤니티 운영'
+      content:
+        '서비스 기획, 커뮤니티 운영, NFT 마켓플레이스 기획 / 프로토타입 개발'
     },
     {
-      title: '코딩독(SI/서비스 창업동아리) 공동 창업',
+      title: '코딩독(솔루션 창업동아리)',
       date: '2020-08 ~ 2021-02',
       content:
         '초기창업패키지 지원사업(대학 창업동아리 대상) 참여, 서비스 기획, 캐시카우 외주활동'
@@ -442,7 +504,7 @@ export const ETC = {
       title: '순천향대학교 정보보호학 학술동아리 SecurityFirst 19대 부회장',
       date: '2018-12 ~ 2019-12',
       content:
-        '신입생 교육, 웹 해킹팀 운영, 대외/대내 해킹대회 기획/운영, 총무, 서기, 각종 동아리 연례행사 운영'
+        '50명 규모 신입회원 교육, 웹 해킹팀 운영, 대외/대내 해킹대회 기획/운영, 총무, 서기, 각종 동아리 연례행사 운영'
     },
     {
       title: '육군 병장 만기 전역',
