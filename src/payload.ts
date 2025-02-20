@@ -102,7 +102,7 @@ export const EXPERIENCE = [
       '4개 플랫폼간 통합인증서버 구축, 이메일기반 인증에서 소셜인증 증설',
       'Jenkins를 통한 CI/CD 파이프라인 및 블루/그린 배포 인프라 구축',
       '침해사고대응, 인프라단 보안 유지보수(Turnstile, Throttler, WAF)',
-      '2~3주 주기 배포 스프린트간의 모바일앱 BE git flow 설계',
+      '1~2주 주기 배포 스프린트간의 모바일앱 BE git flow 설계',
       '8개 서비스 네트워크 인프라 관리(AWS, SSL, ACL, CDN, DNS, nginx)',
       'Innopay, Utransfer 연계 환전(출금) 인증프로세스 및 전산 시스템 개발',
       'Innopay, Paypal 연계 결제 전산 시스템 개발',
