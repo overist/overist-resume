@@ -46,10 +46,24 @@ const Experience: React.FC = () => {
           </Typography>
 
           <Box ml={2}>
-            {exp.content.map((content, index) => (
-              <Typography variant="body1" key={index} width={'fit-content'}>
-                • {content}
-              </Typography>
+            {exp.contents.map((content, index) => (
+              <Box key={index} mb={1}>
+                {content.type && (
+                  <Typography
+                    variant="body1"
+                    key={index}
+                    width={'fit-content'}
+                    fontWeight={'bold'}
+                  >
+                    [{content.type}]
+                  </Typography>
+                )}
+                {content.texts.map((text) => (
+                  <Typography variant="body1" key={index} width={'fit-content'}>
+                    • {text}
+                  </Typography>
+                ))}
+              </Box>
             ))}
           </Box>
 
